@@ -1,6 +1,6 @@
 import java.util.Scanner;
 public class anagramMethod {
-    public void anagram(String a, String b){
+    public static void anagram(String a, String b){
         char []c = a.toCharArray();
         char []d = b.toCharArray();
         int flag =0;
@@ -26,7 +26,9 @@ public class anagramMethod {
 
 
     public static void main(String[] args) {
-
+        String s = "ram";
+        String s2 = "amr";
+        anagram(s,s2);
     }
 
 }
