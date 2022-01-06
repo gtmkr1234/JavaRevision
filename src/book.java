@@ -25,6 +25,12 @@ public class book {
     }
 
     public static void main(String[] args) {
+    book []arr = new book[10];
+        for (int i = 0; i < arr.length; i++) {
+            System.out.printf("Enter the details of the book number %d",i+1);
+            arr[i]= new book();
+            System.out.println();
+        }
 
     }
 }
