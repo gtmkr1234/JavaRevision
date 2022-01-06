@@ -24,6 +24,30 @@ public class book {
         System.out.println("the price of the book is " + price);
     }
 
+    public static int maxPriceIndex(book[] a){
+        int max =a[0].price;
+        int index =0;
+        for (int i = 0; i < a.length; i++) {
+            if(a[i].price>max){
+                max = a[i].price;
+                index =i+1;
+            }
+        }
+        return index;
+    }
+
+    public static int minPriceIndex(book[] a){
+        int min = a[0].price;
+        int index =0;
+        for (int i = 0; i < a.length; i++) {
+            if(a[i].price<min){
+                min = a[i].price;
+                index = i+1;
+            }
+        }
+        return index;
+    }
+
     public static void main(String[] args) {
     book []arr = new book[10];
         for (int i = 0; i < arr.length; i++) {
@@ -31,6 +55,11 @@ public class book {
             arr[i]= new book();
             System.out.println();
         }
+        int maxIndex = maxPriceIndex(arr);
+        int minIndex = minPriceIndex(arr);
+        System.out.println("Difference between max and min price is " + (arr[maxIndex].price-arr[minIndex].price));
+        arr[maxIndex].showDetails();
+        arr[minIndex].showDetails();
 
     }
 }
