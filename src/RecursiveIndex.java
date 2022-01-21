@@ -15,5 +15,8 @@ public class RecursiveIndex {
         s.close();
     }
 
+    public int indexFinder(int []a, int k){
+
+    }
 
 }
